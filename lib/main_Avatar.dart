@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_qin/listData.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,36 +37,143 @@ class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: listData.map((value) {
-        return Card(
-          clipBehavior: Clip.antiAlias,//强制裁剪图片
-          elevation: 14.0,//阴影
-          color: Colors.grey,//背景色
-          shadowColor: Colors.deepPurple,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),  //设置圆角
+      children: <Widget>[
+        Card(
           margin: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
               AspectRatio(
                 aspectRatio: 16 / 9,
                 child: Image.network(
-                  value["imageUrl"],
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ListTile(
+                  leading: ClipOval(
+                    child: Image.network(
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                      fit: BoxFit.cover,
+                      height: 50,
+                      width: 50,
+                    ),
+                  ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
+            ],
+          ),
+        ),
+        Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.network(
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
                   fit: BoxFit.cover,
                 ),
               ),
               ListTile(
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
-                      value["imageUrl"],
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
                     ),
                   ),
-                  title: Text(value["title"]),
-                  subtitle: Text(value["desc"],maxLines: 2,overflow: TextOverflow.ellipsis,),
-              ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
             ],
           ),
-        );
-      }).toList(),
+        ),
+        Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.network(
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                    ),
+                  ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
+            ],
+          ),
+        ),
+        Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.network(
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                    ),
+                  ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
+            ],
+          ),
+        ),
+        Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.network(
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                    ),
+                  ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
+            ],
+          ),
+        ),
+        Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Image.network(
+                  "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef33521789f8faaf51f3de662d?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+                    ),
+                  ),
+                  title: Text("主标题"),
+                  subtitle: Text("subtitle ")),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -143,10 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline4,
+              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
