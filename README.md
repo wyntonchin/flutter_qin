@@ -1,2 +1,2 @@
-# fuckkotlin
-kotlin学习仓库
+# fuckflutter
+flutter学习仓库
