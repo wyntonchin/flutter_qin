@@ -10,20 +10,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        ListTile(
-          title: Text('我是一个首页'),
+        RaisedButton(
+          onPressed: () {},
+          child: Text('jump forward search page'),
+          color: Colors.blue,
         ),
-        ListTile(
-          title: Text('我是一个文本2'),
-        ),
-        ListTile(
-          title: Text('我是一个文本'),
-        ),
-        ListTile(
-          title: Text('我是一个文本2'),
-        ),
+        RaisedButton(
+          onPressed: () {},
+          child: Text('jump single page with value'),
+          color: Colors.blue,
+        )
       ],
     );
   }
